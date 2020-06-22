@@ -8,5 +8,6 @@ public class Main {
         System.out.println(MyUtil.hanyuToPinyin("中"));
         System.out.println(MyUtil.hanyuToPinyin("垚"));
         System.out.println(MyUtil.hanyuToPinyin("吕"));
+        System.out.println(MyUtil.hanyuToPinyin("ni中文hao"));
     }
 }

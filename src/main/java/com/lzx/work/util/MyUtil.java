@@ -20,7 +20,7 @@ public class MyUtil {
      */
     public static String hanyuToPinyin(String hanyu){
         StringBuilder sb = new StringBuilder();
-        if(StringUtils.isBlank(hanyu) || !hanyu.matches(REGEX_OF_CHINESE)){
+        if(StringUtils.isBlank(hanyu)){
             return sb.toString();
         }
         HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
@@ -44,9 +44,13 @@ public class MyUtil {
         try {
             char[] hanyuCharArr = hanyu.toCharArray();
             for (char hanyuChar : hanyuCharArr) {
-                //如果是多音字,返回多个拼音,这里只取第一个
-                String[] pinyinArr = PinyinHelper.toHanyuPinyinStringArray(hanyuChar, format);
-                sb.append(pinyinArr[0]);
+                if(String.valueOf(hanyuChar).matches(REGEX_OF_CHINESE)) {
+                    //如果是多音字,返回多个拼音,这里只取第一个
+                    String[] pinyinArr = PinyinHelper.toHanyuPinyinStringArray(hanyuChar, format);
+                    sb.append(pinyinArr[0]);
+                }else{
+                    sb.append(hanyuChar);
+                }
             }
         } catch (BadHanyuPinyinOutputFormatCombination badHanyuPinyinOutputFormatCombination) {
             badHanyuPinyinOutputFormatCombination.printStackTrace();
