@@ -9,5 +9,11 @@ public class Main {
         System.out.println(MyUtil.hanyuToPinyin("垚"));
         System.out.println(MyUtil.hanyuToPinyin("吕"));
         System.out.println(MyUtil.hanyuToPinyin("ni中文hao"));
+        System.out.println(MyUtil.hanyuToPinyin("吸"));
+        System.out.println(MyUtil.hanyuToPinyin("哈"));
+        System.out.println(MyUtil.hanyuToPinyin("你"));
+        System.out.println(MyUtil.hanyuToPinyin("我"));
+        System.out.println(MyUtil.hanyuToPinyin("他"));
+        System.out.println(MyUtil.hanyuToPinyin("谁"));
     }
 }

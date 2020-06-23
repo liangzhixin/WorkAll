@@ -6,12 +6,20 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+import net.sourceforge.pinyin4j.multipinyin.MultiPinyinConfig;
 import org.apache.commons.lang3.StringUtils;
+
+import java.util.Optional;
 
 /**
  * @author lzx
  */
 public class MyUtil {
+
+    static {
+        //自定义外挂词库
+        Optional.ofNullable(Thread.currentThread().getContextClassLoader().getResource("hanyuTopinyin.txt")).ifPresent(url -> MultiPinyinConfig.multiPinyinPath = url.getPath());
+    }
 
     private static final String REGEX_OF_CHINESE = "[\\u4e00-\\u9fa5]+";
 
