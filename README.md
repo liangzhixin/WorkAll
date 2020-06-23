@@ -1,2 +1,5 @@
 # WorkAll
-工作中遇到的一些知识点
+
+#中文转拼音
+方法：MyUtil.hanyuToPinyin
+更多见 https://github.com/belerweb/pinyin4j
