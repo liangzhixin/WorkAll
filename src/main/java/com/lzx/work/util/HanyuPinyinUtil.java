@@ -14,7 +14,7 @@ import java.util.Optional;
 /**
  * @author lzx
  */
-public class MyUtil {
+public class HanyuPinyinUtil {
 
     static {
         //自定义外挂词库
