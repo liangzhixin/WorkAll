@@ -11,8 +11,8 @@ public class ImmutableMapUse {
 
     /**
      * ImmutableMap:
-     *      1.key和value不能为null
-     *      2.不可修改
+     * 1.key和value不能为null
+     * 2.不可修改
      */
     public static void main(String[] args) {
         //初始化方式一,键值对<=5个

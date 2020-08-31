@@ -4,10 +4,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @desc LinkedHashMap实现LRU算法
  * @author LIANGZHIXIN059
+ * @desc LinkedHashMap实现LRU算法
  */
-public class LRULinkedHashMap<K,V> extends LinkedHashMap<K,V> {
+public class LRULinkedHashMap<K, V> extends LinkedHashMap<K, V> {
 
     /**
      * 最大容量
@@ -51,39 +51,39 @@ public class LRULinkedHashMap<K,V> extends LinkedHashMap<K,V> {
         map.put("g", "g");
         //c a b f g d
         map.get("d");
-        map.forEach((k,v) -> System.out.print(v + ","));
+        map.forEach((k, v) -> System.out.print(v + ","));
         System.out.println();
 
         //c b f g d a
         map.get("a");
-        map.forEach((k,v) -> System.out.print(v + ","));
+        map.forEach((k, v) -> System.out.print(v + ","));
         System.out.println();
 
         //b f g d a c
         map.get("c");
-        map.forEach((k,v) -> System.out.print(v + ","));
+        map.forEach((k, v) -> System.out.print(v + ","));
         System.out.println();
 
         //f g d a c b
         map.get("b");
-        map.forEach((k,v) -> System.out.print(v + ","));
+        map.forEach((k, v) -> System.out.print(v + ","));
         System.out.println();
 
         //f g d a c b h
         map.put("h", "h");
-        map.forEach((k,v) -> System.out.print(v + ","));
+        map.forEach((k, v) -> System.out.print(v + ","));
         System.out.println();
 
         //f,g,d,a,c,b,h,j,k,l
         map.put("j", "j");
         map.put("k", "k");
         map.put("l", "l");
-        map.forEach((k,v) -> System.out.print(v + ","));
+        map.forEach((k, v) -> System.out.print(v + ","));
         System.out.println();
 
         //g,d,a,c,b,h,j,k,l,m
         map.put("m", "m");
-        map.forEach((k,v) -> System.out.print(v + ","));
+        map.forEach((k, v) -> System.out.print(v + ","));
         System.out.println();
     }
 }
