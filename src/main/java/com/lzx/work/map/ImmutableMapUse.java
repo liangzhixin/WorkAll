@@ -1,10 +1,13 @@
-package com.lzx.work.classUse;
+package com.lzx.work.map;
 
 import com.google.common.collect.ImmutableMap;
 
 import java.util.Map;
 
-public class ImmutableMap_Use {
+/**
+ * @author LIANGZHIXIN059
+ */
+public class ImmutableMapUse {
 
     /**
      * ImmutableMap:
@@ -13,7 +16,7 @@ public class ImmutableMap_Use {
      */
     public static void main(String[] args) {
         //初始化方式一,键值对<=5个
-        Map<String, Object> map = ImmutableMap.of(
+        Map<String, Object> map1 = ImmutableMap.of(
                 "k1", "v1",
                 "k2", "v2",
                 "k3", "v3",
@@ -21,7 +24,7 @@ public class ImmutableMap_Use {
                 "k5", "v5");
 
         //初始化方式二：超过5个
-        map = ImmutableMap.<String, Object>builder()
+        Map<String, Object> map2 = ImmutableMap.<String, Object>builder()
                 .put("k1", "k1")
                 .put("k2", "k2")
                 .put("k3", "k3")
@@ -30,6 +33,8 @@ public class ImmutableMap_Use {
                 .put("k6", "k6")
                 .build();
 
-        map.forEach((k, v) -> System.out.println(k + "," + v));
+        map1.forEach((k, v) -> System.out.println(k + "," + v));
+        System.out.println("======================================");
+        map2.forEach((k, v) -> System.out.println(k + "," + v));
     }
 }
